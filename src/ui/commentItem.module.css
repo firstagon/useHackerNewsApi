@@ -1,0 +1,43 @@
+.comment_template {
+  display: flex;
+
+  width: 60%;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+
+  list-style: none;
+
+  width: 60%;
+
+  margin: 0px;
+  padding: 0px;
+  padding-top: 1vh;
+
+  border-bottom: 1px solid black;
+
+  /* overflow: scroll; */
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.username {
+  display: flex;
+  border-top: 1px solid black;
+}
+
+.text {
+  padding: 1vh 0 1vh 0;
+  /* border-bottom: 1px solid black; */
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+}

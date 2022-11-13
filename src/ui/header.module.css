@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+
+    /* background-color: rgb(100, 50, 300); */
+    background-color: rgb(35, 25, 65);
+
+    color: blanchedalmond;
+
+    height: 5vh;
+    width: 100%;
+}
+
+/* 36 27 64 */
+
+.button {
+    height: 90%;
+
+    border-radius: 5px;
+    border: 1px solid #282c34;
+
+    margin-right: 2vw;
+}
+
+.button:hover {
+    background-color: rgb(60, 255, 200);
+}
+
+._dark {
+    color: whitesmoke;
+    background-color: rgb(100, 50, 300);
+}

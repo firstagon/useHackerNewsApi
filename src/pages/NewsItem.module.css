@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 95vh;
+
+  padding-top: 5vh;
+}
+
+.news-page_header {
+}
+
+.white-mode {
+  background-color: whitesmoke;
+  color: black;
+}
+
