@@ -1,7 +1,7 @@
 import classes from "./switchButton.module.css";
 
 const SwitchButton = (props) => {
-  console.log(props.title);
+  // console.log(props.title);
   return (
     <button onClick={props.onClick} className={classes.button}>
 

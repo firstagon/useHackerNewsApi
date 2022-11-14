@@ -28,8 +28,6 @@ const NewsCard = (props) => {
     themeMode = classes["white-mode"];
   }
 
-  // console.warn(getCurrComment(33505451))
-
   const newsComment = props.currentStory.kids ? props.currentStory.kids : false;
 
   useEffect(() => {
@@ -47,16 +45,14 @@ const NewsCard = (props) => {
           })
           .then((data) => {
             arrComm.push(data);
-            // console.log(arrComm)
-            return (arrComm.length === newsComment.length ? setComments(arrComm) : '')
+            return arrComm.length === newsComment.length
+              ? setComments(arrComm)
+              : "";
           })
           .catch((err) => {
             throw new Error(err);
           });
       });
-
-      // setComments(arrComm)
-
     }
   }, [newsComment]);
 
@@ -71,7 +67,6 @@ const NewsCard = (props) => {
         rel="nofollow noopener noreferrer"
         href={`${props.currentStory.url}`}
       >
-        {" "}
         {props.currentStory.title}{" "}
       </a>
       {newsComment && <CommentItem items={comments} isExtra={false} />}
@@ -86,7 +81,6 @@ const NewsCard = (props) => {
   );
 
   return props.currentStory ? newsCard : loadPlate;
-  // {newsCard}
 };
 
 export default NewsCard;

@@ -10,6 +10,12 @@ const uiSlice = createSlice({
   reducers: {
     hideNotification(state) {
       state.noteIsVisible = false;
+
+      state.notification = {
+        status: 'hide me',
+        title: 'hide me',
+        message: 'hide me',
+      };
     },
     showNotification(state, action) {
       state.noteIsVisible = true;

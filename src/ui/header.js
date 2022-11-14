@@ -34,10 +34,13 @@ const Header = (props) => {
     dispatch(fetchNews)
   }
 
+  const hoverHeadrHandler = () => {
+
+  }
+
   return (
     <React.Fragment>
-      <div className={classes.header}>
-        <p> something </p>
+      <div className={classes.header} >
         <button
           onClick={themeHandler}
           className={`${classes.button} ${currTheme}`}

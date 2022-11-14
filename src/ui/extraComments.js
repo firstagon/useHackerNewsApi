@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CommentItem from "./commentItem";
 import SwitchButton from "./switchButton";
+import useHttp from "../hooks/useRequest";
+import { getCommentsIds } from '../libs/api'
 
 //  33543946
 
@@ -8,7 +10,6 @@ const ExtraComments = (props) => {
   const [isShown, setIsShown] = useState(false);
   const [commentsState, setCommentsState] = useState(null);
   const commentIds = props.commenstIds;
-  // console.log(commentIds)
   const buttTitle = isShown ? "Hide branch" : "Show branch";
 
   useEffect(() => {
@@ -16,17 +17,10 @@ const ExtraComments = (props) => {
       return;
     } else {
       let arrComm = [];
-
       commentIds.forEach((element) => {
-        fetch(
-          `https://hacker-news.firebaseio.com/v0/item/${element}.json?print=pretty`
-        )
-          .then((resp) => {
-            return resp.json();
-          })
+        getCommentsIds(element)
           .then((data) => {
             arrComm.push(data);
-            // console.log(arrComm)
             return arrComm.length === commentIds.length
               ? setCommentsState(arrComm)
               : "";

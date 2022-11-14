@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 // import { newsActions } from "../store/news-slice";
 import { fetchNews } from "../store/news-actions";
@@ -13,7 +13,7 @@ const Body = (props) => {
   const newsStore = useSelector((state) => state.data.news);
   const themeState = useSelector((state) => state.ui.theme)
 
-  useMemo(() => {console.warn(themeState)}, [themeState]);
+  // console.log(newsStore)
 
   useEffect(() => {
     dispatch(fetchNews);
