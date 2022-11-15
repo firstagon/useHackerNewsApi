@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-top: 2vh;
+
+  overflow: scroll;
+
+  height: 98vh;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.white-mode {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.link {
+  display: flex;
+
+  padding: 0 1vw 1vh 2vw;
+
+  color: rgb(100, 50, 300);
+}
+
+/* .title:hover {
+  color: rgb(60, 255, 200);
+} */
+
+.link:visited {
+  color: grey;
+}
