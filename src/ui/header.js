@@ -34,20 +34,18 @@ const Header = (props) => {
     dispatch(fetchNews)
   }
 
-  const hoverHeadrHandler = () => {
-
-  }
+  
 
   return (
     <React.Fragment>
-      <div className={classes.header} >
+      <div className={classes.header + ' ' + (props.isItem ? classes._displaced : '')} >
         <button
           onClick={themeHandler}
           className={`${classes.button} ${currTheme}`}
         > Theme </button>
         <button
           onClick={refreshNewsHandler}
-          className={`${classes.button} ${currTheme}`}
+          className={`${classes.button + ' ' + (props.isItem ? classes.hided : '')} ${currTheme}`}
         > Refresh news</button>
       </div>
     </React.Fragment>

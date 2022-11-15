@@ -62,7 +62,7 @@ const NewsCard = (props) => {
         <div> {props.currentStory.by} </div>
         <div> {new Date(props.currentStory.time * 1000).toLocaleString()} </div>
       </div>
-      <a
+      <a className={classes.link}
         target="_blank"
         rel="nofollow noopener noreferrer"
         href={`${props.currentStory.url}`}

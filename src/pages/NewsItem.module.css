@@ -4,16 +4,36 @@
   justify-content: flex-start;
   align-items: center;
 
-  padding-top: 5vh;
+  padding-top: 2vh;
 
-  /* height: 100%; */
+  overflow: scroll;
+
+  height: 98vh;
 }
 
-.news-page_header {
+.container::-webkit-scrollbar {
+  display: none;
 }
+
+
 
 .white-mode {
   background-color: whitesmoke;
   color: black;
 }
 
+.link {
+  display: flex;
+
+  padding: 0 1vw 1vh 2vw;
+
+  color: rgb(100, 50, 300);
+}
+
+/* .title:hover {
+  color: rgb(60, 255, 200);
+} */
+
+.link:visited {
+  color: grey;
+}

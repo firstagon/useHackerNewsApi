@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Fragment } from "react";
-import {  Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
@@ -16,24 +16,25 @@ function App() {
 
   return (
     <Fragment>
-      <Header />
       <Switch>
-
-        <Route path="/" exact> <Body /> </Route>
-
-    <Route path='/storyid:newsId'>
-      <NewsItem />
-    </Route>
-
+        <Route path="/" exact>
+          <Header />
+          <Body />
+        </Route>
+        <Route path="/storyid:newsId">
+          <Header isItem={true} />
+          <NewsItem />
+        </Route>
       </Switch>
 
-      {notification.noteIsVisible &&
+      {notification.noteIsVisible && (
         <Notification
           status={notification.notification.status}
           title={notification.notification.title}
           message={notification.notification.message}
           note={notification.notification}
-        />}
+        />
+      )}
     </Fragment>
   );
 }

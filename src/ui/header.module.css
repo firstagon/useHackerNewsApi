@@ -47,3 +47,7 @@
 .hided {
     display: none;
 }
+
+._displaced {
+    width: 20%;
+}

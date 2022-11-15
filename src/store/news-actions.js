@@ -1,12 +1,12 @@
 import { uiActions } from "./ui-actions";
 import { newsActions } from "./news-slice";
-
 const numOfNews = 25;
 const fromNews = 200;
 
-export const fetchNews = (dispatch) => {
+export  const fetchNews = (dispatch) => {
+  
   const news = [];
-
+  
   fetch("https://hacker-news.firebaseio.com/v0/newstories.json")
     .then((response) => {
       return response.json();
@@ -14,7 +14,7 @@ export const fetchNews = (dispatch) => {
     .then((data) => {
       const allNewsIds = Array.from(data);
       const newsIds = allNewsIds.splice(fromNews, numOfNews);
-
+      
       newsIds.forEach((item) => {
         fetch(`https://hacker-news.firebaseio.com/v0/item/${item}.json`)
           .then((resp) => {
@@ -32,6 +32,7 @@ export const fetchNews = (dispatch) => {
             if (news.length === numOfNews) {
               dispatch(newsActions.getNews({ items: news }));
               dispatch(uiActions.hideNotification());
+              
             }
             return;
           })

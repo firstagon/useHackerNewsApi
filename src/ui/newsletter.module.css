@@ -37,6 +37,11 @@
 
 }
 
+/* .news:hover {
+    transition: all 0.3s ease;
+    border: 1px solid rgb(100, 50, 300, 0.2);
+} */
+
 .news:first-child {
     margin-top: 1vh;
 }
@@ -63,4 +68,14 @@
     display: flex;
 
     padding: 0 1vw 1vh 2vw;
+
+    color: rgb(100, 50, 300);
+}
+
+/* .title:hover {
+    color: rgb(60, 255, 200);
+} */
+
+.title:visited {
+    color: grey;
 }
