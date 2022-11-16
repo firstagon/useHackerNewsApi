@@ -10,7 +10,7 @@
 
   list-style: none;
 
-  width: 60%;
+  width: 60vw;
 
   margin: 0px;
   padding: 0px;
@@ -24,6 +24,7 @@
 .comment {
   display: flex;
   flex-direction: column;
+  margin-top: 1vh;
 
 }
 
@@ -40,4 +41,29 @@
 .date {
   display: flex;
   justify-content: flex-end;
+}
+
+.extra-branch {
+  display: flex;
+  width: 55vw;
+  padding-left: 4vw;;
+  /* width: 40vw; */
+
+  /* background-color: red; */
+}
+
+.button {
+
+  min-height: 2.5vh;
+  
+  background-color: rgb(100, 50, 300);
+
+  border-radius: 5px;
+  border: 1px solid #282c34;
+
+  margin-top: 1vh;
+}
+
+.button:hover {
+  background-color: rgb(60, 255, 200);
 }

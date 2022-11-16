@@ -2,4 +2,29 @@
     display: flex;
     height: fit-content;
     justify-content: center;
+    align-items: center;
+
+    min-height: 2.5vh;
+  
+    /* background-color: rgb(100, 50, 300); */
+    background-color: rgba(0, 0, 0, 0);
+  
+    border-radius: 5px;
+    /* border: 1px solid #282c34; */
+    border: 1px solid rgb(100, 50, 300);
+  
+    margin-top: 1vh;
+    padding: 0;
+
+    color: white;
 }
+
+.button:hover {
+    background-color: rgb(100, 50, 300);
+    /* border: 1px solid rgb(60, 255, 200); */
+  }
+
+  ._white {
+    color:black;
+    
+  }

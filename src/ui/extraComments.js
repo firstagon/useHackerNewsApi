@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CommentItem from "./commentItem";
 import SwitchButton from "./switchButton";
-import useHttp from "../hooks/useRequest";
 import { getCommentsIds } from '../libs/api'
 
 //  33543946
