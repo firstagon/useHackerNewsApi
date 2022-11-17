@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import { useSelector } from 'react-redux';
 import classes from "./commentItem.module.css";
 import ExtraComments from "./extraComments";
 
 const CommentItem = (props) => {
+
+  const themeState = useSelector((state) => state.ui.theme);
+
+  let themeMode = themeState ? '' : ' ' + classes._white;
+
   const [showMore, setShowMore] = useState(false);
 
 
@@ -104,7 +110,7 @@ const CommentItem = (props) => {
       )}
       <ul className={classes.container + branchStyleCss}>{comments}</ul>
       {(isExtra ? false : isMore) && (
-        <button className={classes.button} onClick={showMoreHandle}> show more </button>
+        <button className={classes.button + themeMode} onClick={showMoreHandle}> show more </button>
       )}
       {(isExtra ? true : showMore) && (
         <ul className={classes.container}> {moreComments} </ul>
