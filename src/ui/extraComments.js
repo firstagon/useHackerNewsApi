@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CommentItem from "./commentItem";
 import SwitchButton from "./switchButton";
-import { getCommentsIds } from '../libs/api'
+import { getCommentsIds } from "../libs/api";
 
 //  33543946
 
@@ -39,15 +39,9 @@ const ExtraComments = (props) => {
 
   return (
     <React.Fragment>
-      <SwitchButton onClick={showHandler} title={buttTitle}>
-        {" "}
-      </SwitchButton>
+      <SwitchButton onClick={showHandler} title={buttTitle} />
       {isShown && <CommentItem items={commentsState} isExtra={true} />}
-      {isShown && (
-        <SwitchButton onClick={showHandler} title={buttTitle}>
-          {" "}
-        </SwitchButton>
-      )}
+      {isShown && <SwitchButton onClick={showHandler} title={buttTitle} />}
     </React.Fragment>
   );
 };

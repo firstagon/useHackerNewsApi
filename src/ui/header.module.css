@@ -25,25 +25,33 @@
     /* height: 90%; */
     height: 2vh;
 
-    background-color: rgb(100, 50, 300);
+    /* background-color: rgb(100, 50, 300); */
+    background-color: transparent;
     
     border-radius: 5px;
-    border: 1px solid #282c34;
+    /* border: 1px solid #282c34; */
+    border: 1px solid rgb(100, 50, 300);
 
     margin-right: 1vw;
 }
 
 .button:hover {
-    background-color: rgb(60, 255, 200);
+    /* background-color: rgb(60, 255, 200); */
+    
+    background-color: rgb(100, 50, 300);
 }
 
 /* .button:last-child {
     margin-right: 1vw;
 } */
 
-._dark ._white{
+._dark {
     color: whitesmoke;
-    background-color: black;
+
+}
+
+._white {
+    border: 1px solid black;
 }
 
 .hided {
