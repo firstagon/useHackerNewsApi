@@ -1,5 +1,5 @@
 .container {
-    position: absolute;
+    position: fixed;
     display: flex;
 
     justify-content: flex-end;
@@ -16,6 +16,12 @@
 
     /* background-color: blueviolet; */
     background-color: rgb(100, 50, 300);
+}
+
+.container::after {
+    position: absolute;
+
+    background-color: red;
 }
 
 .title {

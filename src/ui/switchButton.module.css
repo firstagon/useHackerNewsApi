@@ -18,6 +18,8 @@
     padding: 0;
 
     color: white;
+    overflow: hidden;
+
 }
 
 .button:hover {
@@ -28,4 +30,23 @@
   ._white {
     color:black;
     border: 1px solid black;
+    overflow: hidden;
   }
+
+  .isActive {
+    border: 1px solid rgb(100, 50, 300);
+
+
+    /* background-color: rgb(100, 50, 300); */
+  }
+
+  /* .isActive::before {
+    position: sticky;
+    content: 'before';
+
+    width: 100%;
+
+    transform: translateX(-60vw);
+
+    justify-self: flex-start;
+  } */

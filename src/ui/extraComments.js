@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CommentItem from "./commentItem";
 import SwitchButton from "./switchButton";
 import { getCommentsIds } from "../libs/api";
@@ -10,6 +10,8 @@ const ExtraComments = (props) => {
   const [commentsState, setCommentsState] = useState(null);
   const commentIds = props.commenstIds;
   const buttTitle = isShown ? "Hide branch" : "Show branch";
+
+    const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     if (!commentIds) {
@@ -29,9 +31,14 @@ const ExtraComments = (props) => {
           });
       });
     }
-  }, []);
+  }, [commentIds]);
+
+
 
   const showHandler = () => {
+    setIsActive((prevState) => {
+      return !prevState
+    });
     setIsShown((prevState) => {
       return !prevState;
     });
@@ -39,9 +46,8 @@ const ExtraComments = (props) => {
 
   return (
     <React.Fragment>
-      <SwitchButton onClick={showHandler} title={buttTitle} />
+      <SwitchButton onClick={showHandler} isActive={isActive} title={buttTitle} />
       {isShown && <CommentItem items={commentsState} isExtra={true} />}
-      {isShown && <SwitchButton onClick={showHandler} title={buttTitle} />}
     </React.Fragment>
   );
 };

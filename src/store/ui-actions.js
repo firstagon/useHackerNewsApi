@@ -5,21 +5,21 @@ const uiSlice = createSlice({
   initialState: {
     noteIsVisible: false,
     notification: null,
-    theme: true
+    theme: true,
   },
   reducers: {
     hideNotification(state) {
       state.noteIsVisible = false;
 
       state.notification = {
-        status: 'hide me',
-        title: 'hide me',
-        message: 'hide me',
+        status: "hide me",
+        title: "hide me",
+        message: "hide me",
       };
     },
     showNotification(state, action) {
       state.noteIsVisible = true;
- 
+
       state.notification = {
         status: action.payload.status,
         title: action.payload.title,
@@ -27,8 +27,8 @@ const uiSlice = createSlice({
       };
     },
     toggleTheme(state) {
-      state.theme = !state.theme
-    }
+      state.theme = !state.theme;
+    },
   },
 });
 
