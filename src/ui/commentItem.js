@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+
 import classes from "./commentItem.module.css";
 import ExtraComments from "./extraComments";
 
@@ -126,7 +127,6 @@ const CommentItem = (props) => {
             <div className={classes.date}>
               {new Date().toLocaleString(item.time * 1000)}
             </div>
-
             {item.kids && <ExtraComments commenstIds={item.kids} />}
           </li>
         );
