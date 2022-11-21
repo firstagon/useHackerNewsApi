@@ -7,7 +7,7 @@ import classes from "./body.module.css";
 
 import Newsletter from "./newsletter";
 
-const Body = (props) => {
+const Body = () => {
   const dispatch = useDispatch();
   // const checkLoad = useSelector( (state) => state.data.loaded)
   const newsStore = useSelector((state) => state.data.news);

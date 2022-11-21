@@ -52,6 +52,7 @@
   /* width: 40vw; */
 
   /* background-color: red; */
+  
 }
 
 .button {
@@ -76,3 +77,49 @@
   color: black;
   border: 1px solid black;
 }
+
+.isActive {
+  border: 2px solid rgb(100, 50, 300);
+
+  /* background-color: rgb(100, 50, 300); */
+}
+
+.extraCoitainer {
+  display: flex;
+  position: relative;
+
+}
+
+/* .extraComment {
+
+}
+
+.extraComment::before {
+  content: "";
+  position: absolute;
+  border-left: 1px solid rgb(100, 50, 300);
+
+  transform: translateX(-20px);
+
+  top: auto;
+
+  width: 20px;
+  height: 100%;
+} */
+
+.lineBlock {
+  position: absolute;
+  border-left: 1px solid rgb(100, 50, 300);
+
+  transform: translateX(-20px);
+
+  top: auto;
+
+  width: 20px;
+  height: 100%;
+}
+
+.hoveredLine {
+  border-left: 2px solid rgb(100, 50, 300);
+}
+

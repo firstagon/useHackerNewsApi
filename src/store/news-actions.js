@@ -1,11 +1,18 @@
 import { uiActions } from "./ui-actions";
 import { newsActions } from "./news-slice";
-const numOfNews = 25;
-const fromNews = 200;
+const numOfNews = 100;
+const fromNews = 0;
 
 export  const fetchNews = (dispatch) => {
   
   const news = [];
+
+  dispatch(
+    uiActions.showNotification({
+      status: "loading",
+      title: `Getting list of newest news`,
+      message: "just wait",
+    }));
   
   fetch("https://hacker-news.firebaseio.com/v0/newstories.json")
     .then((response) => {
