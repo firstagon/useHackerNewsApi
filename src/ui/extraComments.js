@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import CommentItem from "./commentItem";
 import SwitchButton from "./switchButton";
 import { getCommentsIds } from "../libs/api";
@@ -47,7 +47,7 @@ const ExtraComments = (props) => {
   return (
     <React.Fragment>
       <SwitchButton onClick={showHandler} isActive={isActive} title={buttTitle} />
-      {isShown && <CommentItem items={commentsState} isExtra={true} />}
+      {isShown && <CommentItem hideBranch={showHandler} items={commentsState} isExtra={true} />}
     </React.Fragment>
   );
 };

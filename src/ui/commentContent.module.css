@@ -1,0 +1,126 @@
+.comment_template {
+    display: flex;
+  
+    width: 60%;
+  }
+  
+  .container {
+    display: flex;
+    flex-flow: column;
+  
+    list-style: none;
+  
+    width: 60vw;
+  
+    margin: 0px;
+    padding: 0px;
+    padding-top: 1vh;
+  
+    border-bottom: 1px solid black;
+  
+    /* border-left: 1px solid rgb(100, 50, 300); */
+  
+    /* overflow: scroll; */
+  }
+  
+  .comment {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+  }
+  
+  .username {
+    display: flex;
+    border-top: 1px solid black;
+  }
+  
+  .text {
+    padding: 1vh 0 1vh 0;
+  
+    overflow-wrap: break-word;
+  }
+  
+  .date {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .extra-branch {
+    display: flex;
+    width: 55vw;
+    padding-left: 4vw;;
+    /* width: 40vw; */
+  
+    /* background-color: red; */
+    
+  }
+  
+  .button {
+    color: white;
+  
+    min-height: 2.5vh;
+    
+    background-color: rgb(100, 50, 300, 0);
+  
+    border-radius: 5px;
+    border: 1px solid rgb(100, 50, 300);
+  
+    margin-top: 1vh;
+  }
+  
+  .button:hover {
+    /* background-color: rgb(60, 255, 200); */
+    background-color: rgb(100, 50, 300);
+  }
+  
+  ._white {
+    color: black;
+    border: 1px solid black;
+  }
+  
+  .isActive {
+    border: 2px solid rgb(100, 50, 300);
+  
+    /* background-color: rgb(100, 50, 300); */
+  }
+  
+  .extraCoitainer {
+    display: flex;
+    position: relative;
+  
+  }
+  
+  /* .extraComment {
+  
+  }
+  
+  .extraComment::before {
+    content: "";
+    position: absolute;
+    border-left: 1px solid rgb(100, 50, 300);
+  
+    transform: translateX(-20px);
+  
+    top: auto;
+  
+    width: 20px;
+    height: 100%;
+  } */
+  
+  .lineBlock {
+    position: absolute;
+    border-left: 1px solid rgb(100, 50, 300);
+  
+    transform: translateX(-20px);
+  
+    top: auto;
+  
+    width: 20px;
+    height: 100%;
+  }
+  
+  .hoveredLine {
+    border-left: 2px solid rgb(100, 50, 300);
+  }
+  
+  

@@ -18,6 +18,8 @@ import CommentItem from "./commentItem";
 const NewsCard = (props) => {
   const [comments, setComments] = useState(["nothing fetched"]);
 
+  // console.log(comments)
+
   const themeState = useSelector((state) => state.ui.theme);
 
   let themeMode;
@@ -36,7 +38,8 @@ const NewsCard = (props) => {
     } else {
       let arrComm = [];
 
-      newsComment.forEach((element) => {
+      // newsComment.forEach((element) =>
+      for (let element of newsComment) {
         fetch(
           `https://hacker-news.firebaseio.com/v0/item/${element}.json?print=pretty`
         )
@@ -52,7 +55,7 @@ const NewsCard = (props) => {
           .catch((err) => {
             throw new Error(err);
           });
-      });
+      };
     }
   }, [newsComment]);
 
