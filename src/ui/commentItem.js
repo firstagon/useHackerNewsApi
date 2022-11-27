@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+
 import classes from "./commentItem.module.css";
 import ExtraComments from "./extraComments";
 import CommentContent from "./commentContent";
 
 const CommentItem = (props) => {
   const themeState = useSelector((state) => state.ui.theme);
-
-  console.log(props.items)
 
   const sortByDate = (array) => {
     array.sort((a, b) => {
@@ -17,7 +16,6 @@ const CommentItem = (props) => {
   };
 
 sortByDate(props.items);
-
 
   let themeMode = themeState ? "" : " " + classes._white;
 
@@ -44,17 +42,6 @@ sortByDate(props.items);
             onMouseEnter={() => setHoveredLine(true)}
             onMouseLeave={() => setHoveredLine(false)}
           />
-          {/* <div className={classes.comment + " " + classes.extraComment}>
-            <div className={classes.username}> {item.by} </div>
-            {item.dead || item.deleted ? (
-              "DELETED"
-            ) : (
-              <div className={classes.text}> {item.text} </div>
-            )}
-            <div className={classes.date}>
-              {new Date().toLocaleString(item.time * 1000)}
-            </div>
-          </div> */}
           <CommentContent extraComment={false} item={item} />
         </li>
       );
@@ -80,6 +67,7 @@ sortByDate(props.items);
     } else {
       isMore = true;
 
+
       const getComments = Array.from(props.items);
       const tripleComment = (comments) => {
         return comments.splice(0, 3);
@@ -94,39 +82,12 @@ sortByDate(props.items);
             <CommentContent item={item} />
             {item.kids && <ExtraComments commenstIds={item.kids} />}
           </li>
-
-          // <li
-          //   key={props.items.indexOf(item)}
-          //   className={classes.extraCoitainer}
-          // >
-          //   <div className={classes.comment}>
-          //     <div className={classes.username}> {item.by} </div>
-          //     {item.dead || item.deleted ? (
-          //       "DELETED"
-          //     ) : (
-          //       <div className={classes.text}> {item.text} </div>
-          //     )}
-          //     <div className={classes.date}>
-          //       {new Date().toLocaleString(item.time * 1000)}
-          //     </div>
-          //     {item.kids && <ExtraComments commenstIds={item.kids} />}
-          //   </div>
-          // </li>
         );
       });
 
       moreComments = getComments.map((item) => {
         return (
           <li key={props.items.indexOf(item)} className={classes.comment}>
-            {/* <div className={classes.username}> {item.by} </div>
-            {item.dead || item.deleted ? (
-              "DELETED"
-            ) : (
-              <div className={classes.text}> {item.text} </div>
-            )}
-            <div className={classes.date}>
-              {new Date().toLocaleString(item.time * 1000)}
-            </div> */}
             <CommentContent item={item} />
             {item.kids && <ExtraComments commenstIds={item.kids} />}
           </li>

@@ -21,6 +21,7 @@ const SwitchButton = (props) => {
       <span className={classes.buttonText}> {props.title} </span>
       
     </button>
+
   );
 };
 

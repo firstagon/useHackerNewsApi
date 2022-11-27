@@ -52,7 +52,6 @@
   /* width: 40vw; */
 
   /* background-color: red; */
-  
 }
 
 .button {
@@ -87,7 +86,9 @@
 .extraCoitainer {
   display: flex;
   position: relative;
+
   flex-direction: column;
+
 }
 
 /* .extraComment {
