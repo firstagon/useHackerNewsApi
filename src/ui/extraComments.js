@@ -47,7 +47,8 @@ const ExtraComments = (props) => {
   return (
     <React.Fragment>
       <SwitchButton onClick={showHandler} isActive={isActive} title={buttTitle} />
-      {isShown && <CommentItem items={commentsState} isExtra={true} />}
+      {isShown && <CommentItem hideBranch={showHandler} items={commentsState} isExtra={true} />}
+
     </React.Fragment>
   );
 };

@@ -75,7 +75,6 @@
 ._white {
   color: black;
   border: 1px solid black;
-
 }
 
 .isActive {
@@ -87,6 +86,8 @@
 .extraCoitainer {
   display: flex;
   position: relative;
+
+  flex-direction: column;
 
 }
 
@@ -122,3 +123,4 @@
 .hoveredLine {
   border-left: 2px solid rgb(100, 50, 300);
 }
+
