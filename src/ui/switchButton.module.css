@@ -1,0 +1,159 @@
+:root {
+  --main-border-color: rgb(60, 60, 60);
+}
+
+.button {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    min-height: 2.5vh;
+  
+    background-color: rgba(0, 0, 0, 0);
+  
+    border-radius: 5px;
+    border: 1px solid var(--main-border-color);
+  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 0;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+.buttonText {
+  z-index: 1;
+}
+
+.button::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  content: "+";
+
+  left: 1vh;
+
+  width: 2px;
+  height: 100%;
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  z-index: 1;
+  transition: all 0.5s ease-out;
+}
+
+.button:hover {
+  overflow: hidden;
+}
+
+.button:hover::before {
+  transform: rotate(180deg);
+  color: black;
+
+  border-radius: 0;
+
+  z-index: 1;
+
+  transition: all 0.5s ease-out;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+
+  width: 0%;
+  height: 100%;
+
+  left: 0;
+  background-color: rgb(100, 50, 300);
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  z-index: 0;
+
+  transition: all 0.5s ease-out;
+}
+
+.button:hover::after {
+  position: absolute;
+  content: "";
+
+  width: 20%;
+  height: 100%;
+
+  left: 0;
+  background-color: rgb(100, 50, 300);
+
+  border-radius: 0;
+
+  z-index: 0;
+
+  transition: all 0.5s ease-out;
+}
+
+  ._white {
+    color:black;
+    border: 1px solid black;
+    overflow: hidden;
+
+    position: relative;
+  }
+
+  ._white::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    content: "+";
+  
+    left: 1vh;
+  
+    width: 2px;
+    height: 100%;
+  
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  
+    z-index: 1;
+    transition: all 0.5s ease-out;
+  }
+
+  .isActive {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgb(100, 50, 300);
+  }
+
+  .isActive::before {
+    content: "-";
+  }
+
+  .isActive::after {
+    transform: translateX(95%);
+
+    width: 100%;
+
+    border-radius: 0;
+
+    transition: all 0.5s ease-out;
+  }
+
+  .isActive:hover::after {
+    transform: translateX(0);
+
+    width: 100%;
+
+    transition: all 0.5s ease-out;    
+  }

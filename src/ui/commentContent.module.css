@@ -1,0 +1,128 @@
+:root {
+  --main-border-color: rgb(60, 60, 60);
+  --main-container-color: rgb(24, 24, 28);
+  /* --dark-border-color: #2d3236; */
+}
+
+.comment_template {
+  display: flex;
+
+  width: 60%;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+
+  list-style: none;
+
+  width: 60vw;
+
+  margin: 0px;
+  padding: 0px;
+  padding-top: 1vh;
+
+  /* border-bottom: 1px solid black; */
+
+  /* border-left: 1px solid rgb(100, 50, 300); */
+
+  /* overflow: scroll; */
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+}
+
+.username {
+  display: flex;
+
+  /* background-color: rgb(35, 35, 35); */
+  background-color: var(--main-container-color);
+
+  border: 1px solid var(--main-border-color);
+  border-bottom: none;
+
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  padding: 0 0 0 1vw;
+}
+
+.text {
+  background-color: var(--main-container-color);
+
+  border: 1px solid var(--main-border-color);
+  border-top: none;
+  border-bottom: none;
+
+  padding: 1vh 1vw 1vh 1vw;
+
+  overflow-wrap: break-word;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+
+  background-color: rgb(18, 18, 22);
+
+  border: 1px solid var(--main-border-color);
+  border-top: none;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  padding: 0.5vw 1vw 0 0;
+}
+
+.extra-branch {
+  display: flex;
+  width: 55vw;
+  padding-left: 4vw;
+  /* width: 40vw; */
+
+  /* background-color: red; */
+}
+
+.button {
+  color: white;
+
+  min-height: 2.5vh;
+
+  background-color: rgb(100, 50, 300, 0);
+
+  border-radius: 5px;
+  border: 1px solid rgb(100, 50, 300);
+
+  margin-top: 1vh;
+}
+
+.button:hover {
+  background-color: rgb(100, 50, 300);
+}
+
+._white {
+  color: black;
+  background-color: white;
+}
+
+._whiteDate {
+  background-color: rgb(251, 251, 251);
+  background-color: whitesmoke;
+}
+
+.isActive {
+  border: 2px solid rgb(100, 50, 300);
+}
+
+.extraCoitainer {
+  display: flex;
+  position: relative;
+}
+
+.hoveredLine {
+  border-left: 2px solid rgb(100, 50, 300);
+}

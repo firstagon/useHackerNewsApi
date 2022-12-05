@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-top: 2vh;
+
+  overflow: scroll;
+  overflow-x: hidden;
+
+  height: 98vh;
+
+  padding-left: 1vw;
+}
+
+.container::-webkit-scrollbar {
+  width: 1vw;
+}
+
+.container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  width: 1vw;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* .container {
+  scrollbar-color: #6969dd #e0e0e0;
+  scrollbar-width: thin;
+} */
+
+.white-mode {
+  background-color: whitesmoke;
+  /* background-color: rgb(251, 251, 251); */
+  color: black;
+}
+
+.white-mode::-webkit-scrollbar {
+  width: 1vw;
+}
+
+.white-mode::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.white-mode::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.white-mode::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+
+
+.link {
+  display: flex;
+
+  padding: 0 1vw 1vh 2vw;
+
+  color: rgb(100, 50, 300);
+}
+
+/* .title:hover {
+  color: rgb(60, 255, 200);
+} */
+
+.link:visited {
+  color: grey;
+}
