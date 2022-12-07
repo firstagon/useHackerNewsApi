@@ -1,9 +1,7 @@
-import React, { useEffect, useMemo } from "react";
+import React from "react";
 import classes from "./newsletter.module.css";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-
-
 
 const Newsletter = (props) => {
   const themeState = useSelector((state) => state.ui.theme);
@@ -17,8 +15,6 @@ const Newsletter = (props) => {
     sorted.sort((a, b) => a.time - b.time);
   }
 
-
-
   return (
     <React.Fragment>
       <ul className={classes.news_container}>
@@ -31,10 +27,14 @@ const Newsletter = (props) => {
                   {item.title}
                 </NavLink>
               </div>
-              <div className={classes["news_container__date-score"] + themeDate}>
+              <div
+                className={classes["news_container__date-score"] + themeDate}
+              >
                 <div className={classes.score_container}>
                   <div className={classes.score}> score: {item.score} </div>
-                  <div> {item.kids ? 'comments: ' + item.kids.length : ""} </div>
+                  <div>
+                    {item.kids ? "comments: " + item.kids.length : ""}
+                  </div>
                 </div>
                 <div className={classes.date}>
                   {new Date(item.time * 1000).toLocaleString("default")}

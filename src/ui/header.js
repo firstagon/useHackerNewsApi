@@ -38,7 +38,8 @@ const Header = (props) => {
   }
 
   const backHandler = () => {
-    history.push('/')
+    // history.push('/');
+    history.goBack();
   }
 
   const refreshHandler = () => {
